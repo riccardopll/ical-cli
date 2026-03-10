@@ -50,15 +50,3 @@ export function formatEvents(events: CalendarEvent[]): string {
 
   return lines.join("\n");
 }
-
-export function formatEventCreated(id: string): string {
-  return chalk.green(`✓ Event created`) + chalk.dim(` (${id})`);
-}
-
-export function formatEventUpdated(): string {
-  return chalk.green(`✓ Event updated`);
-}
-
-export function formatEventDeleted(): string {
-  return chalk.green(`✓ Event deleted`);
-}

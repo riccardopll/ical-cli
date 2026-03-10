@@ -1,4 +1,4 @@
-import { listCalendars } from "../jxa/calendars";
+import { listCalendars } from "../sqlite/calendar";
 import { formatCalendars } from "../formatter";
 
 export async function calendarsCommand(): Promise<void> {

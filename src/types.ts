@@ -22,21 +22,3 @@ export interface ListOptions {
   to?: string;
   calendar?: string;
 }
-
-export interface AddOptions {
-  title: string;
-  start: string;
-  end?: string;
-  calendar?: string;
-  location?: string;
-  notes?: string;
-  allDay?: boolean;
-}
-
-export interface EditOptions {
-  title?: string;
-  start?: string;
-  end?: string;
-  location?: string;
-  notes?: string;
-}

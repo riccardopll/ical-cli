@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { listEvents } from "../jxa/events";
+import { listEvents } from "../sqlite/calendar";
 import { formatEvents } from "../formatter";
 import type { ListOptions } from "../types";
 
