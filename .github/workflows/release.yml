@@ -43,17 +43,17 @@ jobs:
             --env inline \
             --target="$BUN_TARGET" \
             src/index.ts \
-            --outfile dist/ical
+            --outfile dist/ical-cli
 
           mkdir -p "release/$ARCHIVE_ARCH"
-          cp dist/ical "release/$ARCHIVE_ARCH/ical"
-          tar -C "release/$ARCHIVE_ARCH" -czf "dist/ical-${ICAL_VERSION}-${ARCHIVE_ARCH}-macos.tar.gz" ical
+          cp dist/ical-cli "release/$ARCHIVE_ARCH/ical-cli"
+          tar -C "release/$ARCHIVE_ARCH" -czf "dist/ical-cli-${ICAL_VERSION}-${ARCHIVE_ARCH}-macos.tar.gz" ical-cli
 
       - name: Upload packaged asset
         uses: actions/upload-artifact@v4
         with:
           name: release-${{ matrix.archive_arch }}
-          path: dist/ical-${{ github.ref_name }}-${{ matrix.archive_arch }}-macos.tar.gz
+          path: dist/ical-cli-${{ github.ref_name }}-${{ matrix.archive_arch }}-macos.tar.gz
 
   publish:
     runs-on: ubuntu-latest

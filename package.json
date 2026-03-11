@@ -7,7 +7,7 @@
     "ical": "./src/index.ts"
   },
   "scripts": {
-    "build": "bun build --compile --minify --env inline src/index.ts --outfile out/ical",
+    "build": "bun build --compile --minify --env inline src/index.ts --outfile out/ical-cli",
     "lint": "bunx prettier . --write && bunx sort-package-json",
     "lint:ci": "bunx prettier . --check && bunx sort-package-json --check",
     "release": "./scripts/tag-release.sh",
